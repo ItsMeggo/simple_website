@@ -1,0 +1,88 @@
+body {
+    background-image: url('assets/bg.jpg');
+    background-size: 120px;
+
+}
+
+@font-face {
+    font-family: "noteswithbroph";
+    src: url('assets/NotesWithBroph-Regular.ttf') format("truetype");
+}
+
+div.main {
+  background-image: url('assets/background.webp');
+  max-width: 1000px;
+  margin: 0 auto;
+  color: black;
+  border-radius:25px;
+}
+
+div.container {
+    background-color: white; 
+    border: pink 3px dashed;
+    padding: var(--padding);
+    max-width: 700px;
+    margin: 0 auto;
+    color: black;
+    border-radius: 25px;
+}
+
+div.scrollable {
+    background-color: rgb(194, 96, 96); 
+    border: pink 3px dashed;
+    padding: var(--padding);
+    max-width: 700px;
+    max-height: 150px;
+    margin: 0 auto;
+    color: black;
+    border-radius: 25px;
+    overflow:auto;
+}
+
+div.portfolio {
+    background-color: rgb(52, 151, 190); 
+    padding: var(--padding);
+    max-width: 700px;
+    max-height: 100px;
+    margin: 0 auto;
+    color: black;
+    border-radius: 25px;
+}
+
+header {
+    text-align: center;
+}
+
+h1 {
+  color: black;
+  text-align: center;
+  font-family: "noteswithbroph";
+  font-size: 28px;
+}
+
+h2 {
+  font-family: "noteswithbroph";
+  font-size: 24px;
+  text-align: center;
+}
+
+h3 {
+  font-family: "noteswithbroph";
+  font-size: 18px;
+  text-align: center;
+}
+
+p {
+  font-family: "noteswithbroph";
+  font-size: 18px;
+}
+
+.draggable {
+  touch-action: none;
+  user-select: none;
+  cursor: grab;
+}
+
+.draggable:active {
+  cursor: grabbing;
+}

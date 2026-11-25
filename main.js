@@ -1,3 +1,5 @@
+const EMAIL ='noteswithbroph@gmail.com'
+
 // here you tell InteractJS which class of items you'd like to be draggable
 interact('.draggable')
   .draggable({
@@ -28,3 +30,4 @@ function dragMoveListener (event) {
 
 // this function is used later in the resizing and gesture demos
 window.dragMoveListener = dragMoveListener
+

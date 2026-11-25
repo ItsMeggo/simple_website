@@ -1,12 +1,24 @@
-body {
-    background-image: url('assets/bg.jpg');
-    background-size: 120px;
-
-}
-
 @font-face {
     font-family: "noteswithbroph";
     src: url('assets/NotesWithBroph-Regular.ttf') format("truetype");
+
+:root {
+    --ink: #1f1b2e;
+    --paper: #fffdf5;
+    --line: #cfe3ee;
+    --pink: #ff8fb8;
+    --blue: #3497be;
+    --tape: #ffe27a;
+    --hand: "noteswithbroph";
+    --type: "Courier New";
+}
+
+body {
+    background-image: url('assets/bg.jpg');
+    background-size: 120px;
+    font: 16px
+}
+
 }
 
 div.main {

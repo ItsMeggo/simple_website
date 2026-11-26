@@ -15,19 +15,18 @@
 
 <!-- Top Bar -->
     <header class="topbar">
-        <nav>
+        <nav aria-label="Main navigation">
             <p>Last Updated: 25/11/2026</p>
             <a href="#quote">Get a Quote</a>
             <a href="#portfolio">Portfolio</a>
-            <a href="#socials">Find Me</a>
+            <a href="#socials">Follow Me</a>
             <a href="#blog">Blog</a>
             <a href="#faq">FAQ</a>
         </nav>
     </header>
 
-<div class ="page">
-    <main>
-        <!--0. hero-->
+<main>
+    <div class="page">
         <section id="top">
             <!--fix logo.webp-->
             <img src="logo.webp" alt="Notes with Broph">
@@ -35,33 +34,36 @@
             <!--animated word: visual-->
             <img src="assets/visual.gif" alt="the word visual, but it's animated" width="350" height="60">
             <p>Visual notes and graphic facilitation by Megan Brophy</p>
+        </section>
+
+        <section id="quote">
+            <h2>Get a Quote</h2>
+            <p>Send me an email with the date, group size, location, and goal of your meeting. Just asking for a quote doesn't commit you to anything, so you've nothing to lose!</p>
             <a class="btn" href="mailto:noteswithbroph@gmail.com?subject=Quote%20request">Get a quote for your meeting</a>
         </section>
 
-        <div class="sticky"><p>Let's get everyone on the same page</p></div>
-
-        <!--1. portfolio-->
         <section id="portfolio">
+            <div class="sticky"><p>Let's get everyone on the same page</p></div>
             <h3>Previously on Notes With Broph... (scroll)</h3>
             <p class="small">Click to zoom in. Scroll sideways for more.</p>
-            <div class="scrollable">    
+            <div class="scrollable">  
                 <button class="polaroid" style="--r:-2deg" data-src="assets/den_haag_uni_project.webp">
-                <img src="assets/den_haag_uni_project.webp" alt="visual summary of a meeting with Den Haag GAA regarding using the Gaelic Games Development Fund to improve integration with local universities." width="200" height="180">
+                <img src="assets/den_haag_uni_project.webp" alt="visual summary of a meeting with Den Haag GAA." width="200" height="180">
                 <span>Den Haag GAA University Collaboration Proposal</span>
                 </button>
 
                 <button class="polaroid" style="--r:-2deg" data-src="assets/shaping_future_learning.webp">
-                <img src="assets/shaping_future_learning.webp" alt="visual summary of how AI may impact the future of learning and education" width="200" height="180">
+                <img src="assets/shaping_future_learning.webp" alt="visual summary of how AI may impact the future of education." width="200" height="180">
                 <span>Shaping Future Learning</span>
                 </button>
 
                 <button class="polaroid" style="--r:-2deg" data-src="assets/gge_coaching_full.webp">
-                <img src="assets/gge_coaching_full.webp" alt="visual summary of the introduction to Gaelic Games Coaching training that took place in Brussels." width="200" height="180">
+                <img src="assets/gge_coaching_full.webp" alt="visual summary of the introduction to Gaelic Games Coaching training." width="200" height="180">
                 <span>Intro to Gaelic Games Coaching Training</span>
                 </button>
 
                 <button class="polaroid" style="--r:-2deg" data-src="assets/digital_sovereignty.webp">
-                <img src="assets/digital_sovereignty.webp" alt="visual summary of digital sovereignty movements in Europe and at the European Union level" width="200" height="180">
+                <img src="assets/digital_sovereignty.webp" alt="visual summary of digital sovereignty movements in Europe." width="200" height="180">
                 <span>European Digital Sovereignty</span>
                 </button>
 
@@ -70,15 +72,15 @@
                 <span>AI in higher education</span>
                 </button>
 
+                <!--fix spelling mistake in image "laatste"-->
                 <button class="polaroid" style="--r:-2deg" data-src="assets/team4teams_q4_2026.webp">
-                <img src="assets/team4teams_q4_2026.webp" alt="visual summary of the q4 2026 meeting for the organisation Team4Teams" width="200" height="180">
+                <img src="assets/team4teams_q4_2026.webp" alt="visual summary of the q4 2026 meeting for Team4Teams" width="200" height="180">
                 <span>Team4Teams Q4 2026 meeting</span>
                 </button>
-                <img src = "assets/pinkstar.webp" alt="star" width="20" height="20"> <img src = "assets/blackstar.webp" alt="star" width="20" height="20">
+                <img src = "assets/pinkstar.webp" alt="" width="20" height="20"> <img src = "assets/blackstar.webp" alt="" width="20" height="20">
             </div>
         </section>
 
-        <!--2. blog notes-->
         <section id="blog">
             <h2> Brophs' Notes</h2>
             <h3>Have a read of my blog!</h3>
@@ -88,42 +90,21 @@
             </ul>
         </section>
 
-        <!--3. faq-->
-        <!--4. Quote + socials-->
-    </main>
-
-    <footer>
-        <!--add a footer-->
-    </footer>
-
-    <!--add zoom ability-->
-    <dialog id="zoom">
-        <img id="zoom-image" alt="">
-        <button class="btn" id="zoom-close" type=""button>Close</button>
-    </dialog>
-
-</div>
-<!-- Get a quote -->
-        <section id="quote">
-        <div class="container">
-            <img src="logo.webp">
-            <!-- How do I get buttons working-->
-            <h2>Get a quote!</h2> <h3> Send me an email with your details</h3>
-            <a href="mailto:noteswithbroph@gmail.com">
-                <!--add clickable image--> Get a Quote
-            </a>
-            <div class = container>
-
-            <img src="assets/title.gif">
-            <h2>Let's make your meetings</h2> 
-                <p>
-                <img src="assets/visual.GIF" alt="the word visual, but it's animated" width="350" height="40" align="middle">
-                </p>
-            </div>
-        </div>
-    </section>
-
-        <br>
+        <section id="faq">
+            <h2>Frequently Asked Questions</h2>
+            <details class="faq">
+                <summary>What?</summary>
+                <p>Here's my answer! :D</p>
+            </details>
+            <details class="faq">
+                <summary>How much does it cost?</summary>
+                <p>In-person visual notetaking starts at 1000€ per day. Online visual notetaking starts at 600€ per day.</p>
+            </details>
+            <details class="faq">
+                <summary>Do you work online or in person?</summary>
+                <p>Both! I'm based in the Benelux region, so I work in-person here. But I can also travel! Send me an email and let's discuss possibilities for working with eachother -> @noteswithbroph@gmail.com</p>
+            </details>
+        </section>
 
         <section id="socials">
             <h2>Find me on...</h2>
@@ -137,13 +118,27 @@
             </ul>
         </section>
 
+    <!--add zoom ability-->
+    <dialog id="zoom" aria-label="Enlarged portfolio image">
+        <img id="zoom-image" alt="">
+        <button class="btn" id="zoom-close" type="button">Close</button>
+    </dialog>
 
+    </div>
         <!-- draggable pencil -->
-        <img src="assets/pencil.webp" alt="pencil" width="150" height="50" class="draggable">
+        <img src="assets/pencil.webp" alt="a pencil you can drag around the page" width="150" height="50" class="draggable">
 
         <!-- guestbook -> get this working -->
-        <a href="http://www.smartgb.com" target="_blank"><img alt="Free Guestbook" border="0" src="http://extras2.smartgb.com/b/logo3_88_31.gif" width="88" height="31"></a><br><a href="http://users2.smartgb.com/g/g.php?a=s&i=g26-41610-8c">My Guestbook</a>
-    </div>
+        <a href="http://www.smartgb.com" target="_blank"><img alt="Free Guestbook" src="http://extras2.smartgb.com/b/logo3_88_31.gif" width="88" height="31"></a><br><a href="http://users2.smartgb.com/g/g.php?a=s&i=g26-41610-8c">My Guestbook</a>
+    </main>
+
+    <footer>
+        <img src="assets/blackstar.webp" alt="" width="20" height="20">
+        <p>this is my footer</p>
+        <img src="assets/pinkstar.webp" alt="" width="20" height="20">
+    </footer>
     
 </body>
 </html> 
+
+<!--Hiiiiiiii! When sending me an email, mention the code "secretHTML" for a 5% discount on your booking!-->

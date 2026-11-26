@@ -1,7 +1,14 @@
+/* Notes With Broph CSS
+1 Font  2 Colours 3 Top Bar 4 Basics  5 Notebook */
+
+
+/* 1. Font */
 @font-face {
     font-family: "noteswithbroph";
     src: url('assets/NotesWithBroph-Regular.ttf') format("truetype");
+}
 
+/* 2. Colour Variables */
 :root {
     --ink: #1f1b2e;
     --paper: #fffdf5;
@@ -9,21 +16,106 @@
     --pink: #ff8fb8;
     --blue: #3497be;
     --tape: #ffe27a;
-    --hand: "noteswithbroph";
-    --type: "Courier New";
+    --ease: cubic-bezier(0.22, 1, 0.36, 1);
+    --padding: 8px;
+    --hand: "noteswithbroph", cursive;
+    --type: "Courier New", Courier, monospace;
 }
 
+/* 3. Basics */
+html { scroll-behaviour: smooth;}
+
 body {
+    margin: 0;
+    padding: 24px 12px 48px;
     background-image: url('assets/bg.jpg');
     background-size: 120px;
     font: 16px
+    color: var(--ink);
+    font: 16px/32px var(--type);
 }
 
+h1, h2, h3 {font-family: var(--hand); margin: 0 }
+h1 { font-size 48px; line-height: 40px; }
+h2 { font-size: 30px; line-height: 32px; display: inline-block; border-bottom: 3px dashed var(--pink); margin-bottom: 16px; }
+h3 { font-size: 24px; line-height: 32px; }
+p { margin: 0 0 16px;}
+a {color: var(--ink); }
+.small {font-size 14px; line-height: 24px }
+
+section { padding: 32px 0; scroll-margin-top: 96px; }
+
+/* 4. Notebook Page */
+.page {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 5px;
+  padding: 48px 24px 32px 80px; /*room for margin line at the left trbl*/
+  background-color: var(--paper);
+  background-image: repeating-linear-gradient(transparent 0 31px, var(--line) 31px 32px);
+  border: 2px solid var(--ink);
+  box-shadow: 8px 8px 0 var(--ink);
+  overflow-x:auto; 
+    scroll-snap-type: x proximity;
+}
+
+.page::before {
+  content: "";
+  position: absolute; top: 0; bottom: 0, left: 56px;
+  width: 2px; background: var(--pink)
+}
+
+/* Top Bar Navigation */
+.topbar {
+    position: sticky; top: 12px; z-index: 10;
+    max-width: 900px; margin: 0 auto 24px;
+    display: flex; flex-wrap: wrap; align-items: center; gap: 8px 24px;
+    padding: 8px 24px;
+    border-radius: 5px;
+    background: var(--paper); border: 2px solid var(--ink); box-shadow: 4px 4px 0 var(--ink);
+}
+
+/*6. Hero, Button, Stickynote */
+.logo { max-height: 64px; width: auto; }
+.hero-word { display: block; max-width: 100%; height: auto margin-bottom: 16px }
+
+.btn {
+  display: inline-block;
+  padding: 8px 24px;
+  font: 20px/28px var(--hand);
+  color: var(--ink); text-decoration: none;
+  background: var(--pink);
+  border: 2px solid var(--ink);
+  box-shadow: 4px 4px 0 var(--ink);
+  cursor: pointer;
+  border-radius: 5%;
+  text-align: center;
+  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease)
+}
+
+/*making button fun to press! Going up (translate negative x,y with shadow staying in same spot) and pressing down (no more shadow) */
+.btn:hover {transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--ink); }
+.btn:active { transform: translate(2px, 2px); box-shadow: 0 0 0 var(--ink); }
+
+.sticky {
+    min-width: 120px; max-width: 680px; margin-top: 32px; padding: 16px 24px;
+    background: var(--tape);
+    border: 2px solid var(--ink);
+    box-shadow: 4px 4px 0 var(--ink);
+    transform: rotate(-1deg);
+    font: 24px/24px var(--hand);
+    justify-content: center;
+    align-items: center;
+    border-radius: 5%;
+    text-align: center;
+    display: flex;
+    overflow-x:auto; 
+    scroll-snap-type: x proximity;
 }
 
 div.bg {
     background-color: var(--blue);
-    color: var(--blue);
 
 }
 
@@ -31,57 +123,53 @@ div.main {
   background-image: url('assets/background.webp');
   max-width: 1000px;
   margin: 0 auto;
-  color: black;
+  color: var(--ink);
   border-radius:25px;
 }
 
 div.container {
-    background-color: white; 
-    border: pink 3px dashed;
+    background-color: var(--paper); 
+    border: var(--pink) 3px dashed;
     padding: var(--padding);
     max-width: 700px;
     margin: 0 auto;
-    color: black;
+    color: var(--ink);
     border-radius: 25px;
 }
 
 div.scrollable {
-    background-color: rgb(194, 96, 96); 
-    border: pink 3px dashed;
+    background-color: var(--paper); 
     padding: 24px 12px 32px;
     max-width: 700px;
-    max-height: 150px;
+    max-height: 250px;
     margin: 0 auto;
-    color: black;
+    box-shadow: 1px 1px 1px 1px var(--pink);
+    color: var(--ink);
     display: flex; 
     gap: 32px;
-    border-radius: 25px;
+    border-radius: 5%;
     overflow-x:auto; 
     scroll-snap-type: x proximity;
 }
 
-div.portfolio {
-    background-color: rgb(52, 151, 190); 
-    padding: var(--padding);
-    max-width: 700px;
-    max-height: 100px;
-    margin: 0 auto;
-    color: black;
-    border-radius: 25px;
-}
+/*Blog posts*/
+.posts { padding: 0; list-style: none; }
+.posts li {margin-bottom: 8px; }
 
 .polaroid {
   position: relative; 
   flex: 0 0 224px; 
   scroll-snap-align: center;
   padding: 8px 8px 12px; 
+  font: inherit;
+  color: var(--ink);
   cursor: zoom-in;
   background: #fff; 
   border: 2px solid var(--ink); 
+  cursor: zoom-in;
   box-shadow: 4px 4px 0 var(--ink);
-  tranform: rotate(var(--r));
+  transform: rotate(var(--r));
   transition: transform 0.5s var(--ease);
-  color: var(--ink);
 }
 .polaroid::before {
     content: ""; 
@@ -96,32 +184,13 @@ div.portfolio {
 .polaroid:hover { transform: rotate(0) scale(1.04); }
 .polaroid:active { transform: rotate(0) scale(0.98); }
 
+dialog { max-width: 92vw; padding: 16px; background: var(--paper); border: 2px solid var(--ink); box-shadow: 8px 8px 0 var(--ink); }
+dialog::backdrop { background: rgba(31, 27, 46, 0.75); }
+dialog img { display: block; max-width: 100%; max-height: 70vh; margin: 0 auto 16px; }
+
+
 header {
     text-align: center;
-}
-
-h1 {
-  color: black;
-  text-align: center;
-  font-family: "noteswithbroph";
-  font-size: 28px;
-}
-
-h2 {
-  font-family: "noteswithbroph";
-  font-size: 24px;
-  text-align: center;
-}
-
-h3 {
-  font-family: "noteswithbroph";
-  font-size: 18px;
-  text-align: center;
-}
-
-p {
-  font-family: "noteswithbroph";
-  font-size: 18px;
 }
 
 .draggable {

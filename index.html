@@ -8,51 +8,45 @@
     <meta name="description" content="Notes with Broph portfolio website">
     <meta name="keywords" content="Graphic Design, Facilitation, Creativity">
     <meta name="author" content="Megan Brophy">
-    <meta name="viewport" content="width=device-width: 80%, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notes With Broph</title>
 </head>
 <body>
 
 <!-- Top Bar -->
-    <div class="bg">
-        <div class="container">
-            <h3>Last Updated: 25/11/2026</h3>
+    <header class="topbar">
+        <nav>
+            <p>Last Updated: 25/11/2026</p>
             <a href="#quote">Get a Quote</a>
             <a href="#portfolio">Portfolio</a>
             <a href="#socials">Find Me</a>
-        </div>
+            <a href="#blog">Blog</a>
+            <a href="#faq">FAQ</a>
+        </nav>
+    </header>
 
-<!-- Get a quote -->
-        <section id="quote">
-        <div class="container">
-            <img src="logo.webp">
-            <!-- How do I get buttons working-->
-            <h2>Get a quote!</h2> <h3> Send me an email with your details</h3>
-            <a href="mailto:noteswithbroph@gmail.com">
-                 <button id="btnOutlook">Get a Quote</button>
-            </a>
-            <div class = container>
-
-            <img src="assets/title.gif">
-            <h2>Let's make your meetings</h2> 
-            <centre>
-                <p>
-                <img src="assets/visual.GIF" alt="the word visual, but it's animated" width="350" height="40" align="middle">
-                </p>
-            </centre>
-            </div>
-        </div>
+<div class ="page">
+    <main>
+        <!--0. hero-->
+        <section id="top">
+            <!--fix logo.webp-->
+            <img src="logo.webp" alt="Notes with Broph">
+            <h1>Let's make your meetings</h1>
+            <!--animated word: visual-->
+            <img src="assets/visual.gif" alt="the word visual, but it's animated" width="350" height="60">
+            <p>Visual notes and graphic facilitation by Megan Brophy</p>
+            <a class="btn" href="mailto:noteswithbroph@gmail.com?subject=Quote%20request">Get a quote for your meeting</a>
         </section>
-        <br>
 
-<!-- My portfolio -->     
+        <div class="sticky"><p>Let's get everyone on the same page</p></div>
+
+        <!--1. portfolio-->
         <section id="portfolio">
-        <div class="scrollable">
             <h3>Previously on Notes With Broph... (scroll)</h3>
-            <p>Click to zoom in. Scroll sideways for more.</p>
-            <div class ="portfolio">
+            <p class="small">Click to zoom in. Scroll sideways for more.</p>
+            <div class="scrollable">    
                 <button class="polaroid" style="--r:-2deg" data-src="assets/den_haag_uni_project.webp">
-                <img src="assets/den_haag_uni_project.webp" alt="visual summary of a meeting with Den Haag GAA regarding using the Gaelic Games Development Fun to improve integration with local universities." width="200" height="180">
+                <img src="assets/den_haag_uni_project.webp" alt="visual summary of a meeting with Den Haag GAA regarding using the Gaelic Games Development Fund to improve integration with local universities." width="200" height="180">
                 <span>Den Haag GAA University Collaboration Proposal</span>
                 </button>
 
@@ -78,21 +72,63 @@
 
                 <button class="polaroid" style="--r:-2deg" data-src="assets/team4teams_q4_2026.webp">
                 <img src="assets/team4teams_q4_2026.webp" alt="visual summary of the q4 2026 meeting for the organisation Team4Teams" width="200" height="180">
-                <span>European Digital Sovereignty</span>
+                <span>Team4Teams Q4 2026 meeting</span>
                 </button>
-
-            </div> 
-
-        <img src = "assets/pinkstar.webp" alt="star" width="20" height="20"> <img src = "assets/blackstar.webp" alt="star" width="20" height="20">
-        </div>
+                <img src = "assets/pinkstar.webp" alt="star" width="20" height="20"> <img src = "assets/blackstar.webp" alt="star" width="20" height="20">
+            </div>
         </section>
+
+        <!--2. blog notes-->
+        <section id="blog">
+            <h2> Brophs' Notes</h2>
+            <h3>Have a read of my blog!</h3>
+            <ul class ="posts">
+                <!--get files from /blog. Copy line for every new post-->
+                <li><a href="blog/test.html">Test</a> <span class="small">26 Nov 2026</span></li>
+            </ul>
+        </section>
+
+        <!--3. faq-->
+        <!--4. Quote + socials-->
+    </main>
+
+    <footer>
+        <!--add a footer-->
+    </footer>
+
+    <!--add zoom ability-->
+    <dialog id="zoom">
+        <img id="zoom-image" alt="">
+        <button class="btn" id="zoom-close" type=""button>Close</button>
+    </dialog>
+
+</div>
+<!-- Get a quote -->
+        <section id="quote">
+        <div class="container">
+            <img src="logo.webp">
+            <!-- How do I get buttons working-->
+            <h2>Get a quote!</h2> <h3> Send me an email with your details</h3>
+            <a href="mailto:noteswithbroph@gmail.com">
+                <!--add clickable image--> Get a Quote
+            </a>
+            <div class = container>
+
+            <img src="assets/title.gif">
+            <h2>Let's make your meetings</h2> 
+                <p>
+                <img src="assets/visual.GIF" alt="the word visual, but it's animated" width="350" height="40" align="middle">
+                </p>
+            </div>
+        </div>
+    </section>
 
         <br>
 
         <section id="socials">
-            <h2 id="socials">Find me on...</h2>
+            <h2>Find me on...</h2>
             <!--add doodle gifs of each logo-->
-            <ul class="socials"></ul>
+            <ul class="socials">
                 <li><a href="https://www.instagram.com/noteswithbroph/">Instagram</a></li>
                 <li><a href="https://www.tiktok.com/@noteswithbroph">TikTok</a></li>
                 <li><a href="https://www.linkedin.com/in/meganbrophydesign/">Linkedin</a></li>
@@ -101,35 +137,6 @@
             </ul>
         </section>
 
-        <div class="container">
-            <h3>To do:</h3>
-            <dl>
-                <dt>Fix Design</dt>
-                    <dd>-Add mouseover effects for portfolio</dd>
-                    <dd>-Allow for zooming in to portfolio images</dd>
-                    <dd>-Make  the divs look more analog, like a notebook on paper</dd>
-                    <dd>-Get wood texture for background</dd>
-                    <dd>-Get the quote button working</dd>
-                    <dd>-Get panorama photo of a notebook to make it long, or find a way to repeat a notebook texture</dd>
-                    <dd>-Get guestbook working</dd>
-                <dt>Add Social Links</dt>
-                    <dd>-Instagram</dd>
-                    <dd>-Linkedin</dd>
-                    <dd>-Tiktok</dd>
-                    <dd>-YouTube</dd>
-                    <dd>-Add some flipnote or other portfolio works?</dd>
-                <dt>Draw assets for designs</dt>
-                    <dd>-Broph doodle</dd>
-                    <dd>-Phone doodle</dd>
-                    <dd>-Speech bubble doodle</dd>
-                    <dd>-Nintendo doodle</dd>
-                <dt>Just add other things that might be fun</dt>
-                    <dd>-Mp3 player</dd>
-                    <dd>-Sound effects</dd>
-                    <dd>-RSS feed</dd>
-                    <dd>-Blog</dd>
-            </dl>
-        </div>
 
         <!-- draggable pencil -->
         <img src="assets/pencil.webp" alt="pencil" width="150" height="50" class="draggable">

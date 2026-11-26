@@ -1,17 +1,19 @@
 const EMAIL ='noteswithbroph@gmail.com'
 
 // here you tell InteractJS which class of items you'd like to be draggable
-interact('.draggable')
-  .draggable({
-    listeners: {
-      // when a user drags the object ('on dragmove') run this function
-      move: dragMoveListener,
-      // call this function on every dragend event
-      end (event) {
-        console.log("item dropped!")
+if (window.interact) {
+  interact('.draggable')
+    .draggable({
+      listeners: {
+        // when a user drags the object ('on dragmove') run this function
+        move: dragMoveListener,
+        // call this function on every dragend event
+        end (event) {
+          console.log("item dropped!")
+        }
       }
-    }
-  })
+    })
+}
 
 function dragMoveListener (event) {
   // all this stuff gets the position of the item while it's being dragged
@@ -30,4 +32,21 @@ function dragMoveListener (event) {
 
 // this function is used later in the resizing and gesture demos
 window.dragMoveListener = dragMoveListener
+
+//--zoom in for portfolio pictures---
+var zoom = document.getElementById('zoom');
+var zoomImage = document.getElementById('zoom-image');
+var polaroids = document.querySelectorAll('.polaroid')
+
+polaroids.forEach(function(polaroid) {
+  polaroid.addEventListener('click', function () {
+    zoomImage.src = polaroid.dataset.src; //use original file name
+    zoomImage.alt = polaroid.querySelector('img').alt; // copy alt text from small img
+    zoom.showModal(); //open popup
+  });
+});
+
+document.getElementById('zoom-close').addEventListener('click', function () {
+  zoom.close();
+})
 
